@@ -1,0 +1,163 @@
+body {
+    _color: #00476E;
+    color: #fff;
+    __background-color: #3C2841;
+    background-color: #83538F;
+    _background-color: #fff;
+    font-family: "Source Sans 3", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 0.928em;
+    text-align: center;
+    padding-bottom: 12px;
+    letter-spacing: 8px;
+}
+
+h2 {
+    font-size: 32px;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 24px;
+    padding-bottom: 6px;
+}
+
+h4 {
+    font-size: 18px;
+    padding-bottom: 4px;
+}
+
+h5 {
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Cormorant SC', serif;
+    color: inherit;
+    font-weight: 400
+}
+
+a {
+    color: inherit
+}
+
+table {
+    color: inherit
+}
+
+.center-content,#login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.spacer-vertical {
+    margin: 80px 0 0 0;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.form {
+    font-size: 110%;
+}
+
+.form input[type="text"], .form textarea {
+    width: 100%;
+}
+
+.form div.row {
+    padding-top: 30px;
+}
+
+.form input[type="password"],.form input[type="text"] {
+    border: 1px solid #00476E
+}
+
+.form input[type="submit"] {
+    color: white;
+    background-color: #008DD0;
+    padding: 10px 30px 10px 30px;
+}
+
+.container {
+    min-width: 320px
+}
+
+.images-invisible-preload {
+    height: 1px;
+    width: 1px;
+    display: none;
+    visibility: hidden
+}
+
+.carousel-control,.carousel-control:focus,.carousel-control:hover {
+    color: white;
+    opacity: 1;
+    background: none !important;
+    filter: none !important;
+    progid: none !important
+}
+
+.carousel-control.left {
+    margin-left: -5px
+}
+
+.carousel-control.right {
+    margin-right: -5px
+}
+
+.juicer-feed h1.referral {
+    display: none !important;
+    /* Removes Juicer logo in Instagram feed */
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size:2em
+    }
+
+    #login-form {
+        width: 300px;
+        font-size: 1em
+    }
+
+    #login-form input {
+        width: 100%;
+        margin-bottom: 10px
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-inner>.item {
+        height:650px;
+        position: relative
+    }
+
+    .carousel-inner img {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-control,.carousel-control:focus,.carousel-control:hover {
+        color:inherit
+    }
+}
