@@ -168,13 +168,14 @@ p {
 }
 
 .row {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 40px;
     vertical-align: middle;
 }
 
 .row.header {
     padding-top: 0 !important;
+    padding-bottom: 60px;
 }
 
 .row.color-a {
