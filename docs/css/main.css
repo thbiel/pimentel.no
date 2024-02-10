@@ -4,11 +4,12 @@ body {
     __background-color: #3C2841;
     background-color: #83538F;
     _background-color: #fff;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Albert Sans", sans-serif;
+    _font-family: "Source Sans 3", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 19px
 }
 
@@ -160,4 +161,71 @@ table {
     .carousel-control,.carousel-control:focus,.carousel-control:hover {
         color:inherit
     }
+}
+
+p {
+    line-height: 200%;
+}
+
+.row {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    vertical-align: middle;
+}
+
+.row.header {
+    padding-top: 0 !important;
+}
+
+.row.color-a {
+    background-color: #83538F;
+    _background-color: #83538F;
+}
+
+.row.color-b {
+    background-color: #564774;
+    _background-color: #4e3155;
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid;
+    color: #9b75a5;
+    border-right-style: none;
+    text-align: center;
+    line-height: 180%;
+}
+
+.box div.heading {
+    color: white;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.box div.text {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.box div.text.bold {
+    font-weight: 700;
+}
+
+.box a {
+    text-decoration: none;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+.box.left {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.box.right {
+    border-right-style: solid;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
 }
