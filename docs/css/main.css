@@ -4,6 +4,7 @@ body {
     __background-color: #3C2841;
     background-color: #83538F;
     _background-color: #fff;
+    __background-color: #3C2841;
     font-family: "Albert Sans", sans-serif;
     _font-family: "Source Sans 3", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -41,7 +42,7 @@ h5 {
     padding-bottom: 2px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant SC', serif;
     color: inherit;
     font-weight: 400
@@ -55,7 +56,7 @@ table {
     color: inherit
 }
 
-.center-content,#login-form-container {
+.center-content, #login-form-container {
     display: flex;
     justify-content: center;
     align-items: center
@@ -81,7 +82,7 @@ table {
     padding-top: 30px;
 }
 
-.form input[type="password"],.form input[type="text"] {
+.form input[type="password"], .form input[type="text"] {
     border: 1px solid #00476E
 }
 
@@ -102,7 +103,7 @@ table {
     visibility: hidden
 }
 
-.carousel-control,.carousel-control:focus,.carousel-control:hover {
+.carousel-control, .carousel-control:focus, .carousel-control:hover {
     color: white;
     opacity: 1;
     background: none !important;
@@ -125,7 +126,7 @@ table {
 
 @media (max-width: 767px) {
     h1 {
-        font-size:2em
+        font-size: 2em
     }
 
     #login-form {
@@ -140,8 +141,8 @@ table {
 }
 
 @media (min-width: 768px) {
-    .carousel-inner>.item {
-        height:650px;
+    .carousel-inner > .item {
+        height: 650px;
         position: relative
     }
 
@@ -158,8 +159,8 @@ table {
 }
 
 @media (min-width: 992px) {
-    .carousel-control,.carousel-control:focus,.carousel-control:hover {
-        color:inherit
+    .carousel-control, .carousel-control:focus, .carousel-control:hover {
+        color: inherit
     }
 }
 
@@ -168,14 +169,17 @@ p {
 }
 
 .row {
-    padding-top: 40px;
-    padding-bottom: 40px;
     vertical-align: middle;
 }
 
 .row.header {
     padding-top: 0 !important;
     padding-bottom: 60px;
+}
+
+.row.stripe {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .row.color-a {
@@ -212,11 +216,11 @@ p {
     font-weight: 700;
 }
 
-.box a {
+.box a, a.button {
     text-decoration: none;
 }
 
-.box a:hover {
+.box a:hover, a.button:hover {
     text-decoration: underline;
 }
 
@@ -229,4 +233,28 @@ p {
     border-right-style: solid;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.price-list h3 {
+    padding-top: 50px;
+}
+
+
+.button {
+    padding: 12px;
+    border-radius: 0.4rem;
+    border: 1px solid #9b75a5;
+    background-color: #564774;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    white-space:nowrap;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a.link {
+    text-decoration-style: dotted;
 }
