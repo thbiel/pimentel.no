@@ -258,3 +258,7 @@ p {
 a.link {
     text-decoration-style: dotted;
 }
+
+.nowrap {
+    white-space: nowrap;
+}
