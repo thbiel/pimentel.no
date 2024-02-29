@@ -245,7 +245,6 @@ p {
     font-size: 22px;
 }
 
-
 .button {
     padding: 12px;
     border-radius: 0.4rem;
@@ -267,4 +266,8 @@ a.link {
 
 .nowrap {
     white-space: nowrap;
+}
+
+.center {
+    text-align: center;
 }
