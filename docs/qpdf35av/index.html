@@ -24,6 +24,15 @@
 
   <body>
     <div class="container-fluid">
+      <div class="row stripe color-a top-menu">
+        <div class="col-xs-3 col-sm-3"></div>
+        <div class="col-xs-6 col-sm-6 center-content">
+          <span><a href="qpdf35av/index.html#">Hjem</a>&nbsp;|&nbsp;</span>
+          <span><a href="qpdf35av/index.html#bestill">Bestill time</a>&nbsp;|&nbsp;</span>
+          <span><a href="qpdf35av/om.html">Om</a></span>
+        </div>
+        <div class="col-xs-3 col-sm-3"></div>
+      </div>
       <div class="row stripe color-a header">
         <div class="col-xs-3 col-sm-3"></div>
         <div class="col-xs-1 col-sm-1 align-self-end">
@@ -40,6 +49,7 @@
       <div class="row stripe color-b">
         <div class="col-xs-3 col-sm-3"></div>
         <div class="col-xs-6 col-sm-6">
+          <h2>Behandlinger</h2>
           <div class="row" style="padding-left: 12px; padding-right: 12px;">
             <div class="col box left">
               <a href="qpdf35av/behandling-bryn.html">
@@ -78,14 +88,16 @@
       </div>
 
       <div class="row stripe color-a">
-        <div class="col-xs-3 col-sm-3"></div>
-        <div class="col-xs-6 col-sm-6">
-          <h2>Bestill time</h2>
-          <iframe id="myIframe" src="https://bestill.timma.no/reservation/pimentel-beauty" allow="accelerometer; gyroscope" width="100%"></iframe>
-          <!-- https://www.smashingmagazine.com/2018/12/feature-policy/ -->
-          <script>iFrameResize({log: true, checkOrigin: 'https://bestill.timma.no'}, '#myIframe')</script>
+        <div class="col"></div>
+        <div class="col-xs-12">
+          <a id="bestill">
+            <h2>Bestill time</h2>
+            <iframe id="myIframe" src="https://bestill.timma.no/reservation/pimentel-beauty" allow="accelerometer; gyroscope" width="100%"></iframe>
+            <!-- https://www.smashingmagazine.com/2018/12/feature-policy/ -->
+            <script>iFrameResize({log: true, checkOrigin: 'https://bestill.timma.no'}, '#myIframe')</script>
+          </a>
         </div>
-        <div class="col-xs-3 col-sm-3"></div>
+        <div class="col"></div>
       </div>
 
 

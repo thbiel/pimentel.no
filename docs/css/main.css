@@ -239,6 +239,12 @@ p {
     padding-top: 50px;
 }
 
+.top-menu a {
+    text-decoration: none;
+    font-family: 'Cormorant SC', serif;
+    font-size: 22px;
+}
+
 
 .button {
     padding: 12px;
