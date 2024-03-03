@@ -193,7 +193,7 @@ p {
 }
 
 .box {
-    padding: 20px;
+    padding: 20px 0 20px 0;
     border: 1px solid;
     color: #9b75a5;
     border-right-style: none;
@@ -205,14 +205,24 @@ p {
     color: white;
     font-weight: 300;
     font-size: 22px;
+    padding-bottom: 14px;
 }
 
-.box div.text {
+.box img {
+    width: 250px;
+}
+
+.box p {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.box div.text, .box span.text {
     font-weight: 400;
     font-size: 16px;
 }
 
-.box div.text.bold {
+.box div.text.bold, .box span.text.bold {
     font-weight: 700;
 }
 
@@ -278,4 +288,13 @@ a.link {
 
 div .illustration {
     padding-top: 70px;
+}
+
+.top-menu {
+    padding-top: 0 !important;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
