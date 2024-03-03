@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,8 @@
     <base href="../">
 
     <script src="js/bootstrap-5.3.2/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/72b61347b5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap-5.3.2/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
@@ -22,28 +24,70 @@
 
   <body>
     <div class="container-fluid">
-      <div class="row stripe color-a header">
-        <div class="col-xs-3 col-sm-3"></div>
+
+      <div id="top-menu" class="row stripe color-a top-menu">
+        <div class="col"></div>
+        <div class="col-xs-6 col-sm-6 center">
+          <span><a href="qpdf35av/index.html#">Hjem</a>&nbsp;|&nbsp;</span>
+          <span><a href="qpdf35av/index.html#bestill">Bestill time</a>&nbsp;|&nbsp;</span>
+          <span><a href="qpdf35av/om.html">Om</a></span>
+          <hr/>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div id="header" class="row stripe color-a header">
+        <div class="col"></div>
         <div class="col-xs-1 col-sm-1 align-self-end">
           <a href="qpdf35av/index.html#bestill" class="button">Bestill time</a>
         </div>
-        <div class="col-xs-1 col-sm-1 align-self-end"></div>
+        <div class="col-xs-1 col-sm-1"></div>
         <div class="col-xs-2 col-sm-2" style="text-align: center;">
           <a href=qpdf35av/index.html><img src="graphics/logo/logo-2.png"></a>
         </div>
-        <div class="col-xs-1 col-sm-1"></div>
-        <div class="col-xs-1 col-sm-1">></div>
-        <div class="col-xs-3 col-sm-3"></div>
+        <div class="col-xs-5 col-sm-5"></div>
       </div>
-      <div class="row color-a">
-        <div class="col-xs-3 col-sm-3"></div>
-        <div class="col-xs-6 col-sm-6">
+
+      <div id="TODO" class="row stripe color-a">
+        <div class="col"></div>
+        <div class="col-6">
           <h2>Bryn og vipper</h2>
           <article>
             <p>Pimentel Beauty kan vi hjelpe deg med brynsstyling, farging av bryn og vipper, brow lamination og veppeløft. Her lytter vi til deg og dine ønsker!</p>
+            <div class="illustration center">
+              <img src="images/illustrations/bryn-vipper-01_iStock-1219383852.jpg" width="1054"/>
+            </div>
           </article>
         </div>
-        <div class="col-xs-3 col-sm-3"></div>
+        <div class="col"></div>
       </div>
+
+      <div id="footer" class="row stripe color-a">
+        <div class="col"></div>
+        <div class="col-xs-6 col-sm-6">
+          <div class="row">
+            <hr/>
+            <h2>Kontakt</h2>
+            <div class="col-3">
+              <h4>Adresse</h4>
+              <span class="nowrap">Eplehagen 43,</span> <span class="nowrap">1424 Ski</span>
+            </div>
+            <div class="col-3">
+              <h4>Telefon</h4>
+              <div class="nowrap"><span class="fa-solid fa-phone" style="margin-right: 12px;"></span><span class="nowrap">407 31 326</span></div>
+            </div>
+            <div class="col-3">
+              <h4>E-post</h4>
+              <div class="nowrap"><span class="fa-regular fa-envelope" style="margin-right: 12px;"></span><span><a href="mailto:roalpim@gmail.com" target="_blank" class="link">roalpim@gmail.com</a></span></div>
+            </div>
+            <div class="col-3">
+              <h4>Sosiale medier</h4>
+              <div class="nowrap"><a href="https://www.facebook.com/pimentelbeauty" target="_blank"><span class="fa-brands fa-facebook fa-2x"></span></a><a href="https://www.instagram.com/pimentelbeauty_/" target="_blank"><span class="fa-brands fa-instagram fa-2x" style="margin-left: 20px;"></span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
   </body>
 </html>
