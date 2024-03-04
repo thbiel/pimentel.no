@@ -156,7 +156,6 @@ p {
     padding: 20px 10px 20px 10px;
     border: 1px solid;
     color: #9b75a5;
-    border-right-style: none;
     text-align: center;
     line-height: 180%;
 }
@@ -192,17 +191,6 @@ p {
 
 .box a:hover, a.button:hover {
     text-decoration: underline;
-}
-
-.box.left {
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.box.right {
-    border-right-style: solid;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
 }
 
 .price-list h3 {
@@ -265,9 +253,28 @@ div .illustration {
 }
 
 /* xs: */
-@media (max-width: 575px) {
+@media (min-width: 0px) {
     h1 {
         font-size: 2em
+    }
+
+    .box.box-1 {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .box.box-2 {
+        border-top-style: none;
+    }
+
+    .box.box-3 {
+        border-top-style: none;
+    }
+
+    .box.box-4 {
+        border-top-style: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
     .grid-tier-info {
@@ -288,6 +295,29 @@ div .illustration {
 
 /* md: */
 @media (min-width: 768px) {
+    .box.box-1 {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0;
+    }
+
+    .box.box-2 {
+        border-top-right-radius: 20px;
+        border-top-style: solid;
+        border-left-style: none;
+    }
+
+    .box.box-3 {
+        border-bottom-left-radius: 20px;
+        border-top-style: none;
+    }
+
+    .box.box-4 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 20px;
+        border-top-style: none;
+        border-left-style: none;
+    }
+
     .grid-tier-info {
         background-color: darkolivegreen;
     }
@@ -302,6 +332,29 @@ div .illustration {
 
 /* xl: */
 @media (min-width: 1200px) {
+    .box.box-1 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .box.box-2 {
+        border-top-right-radius: 0;
+        border-left-style: none;
+    }
+
+    .box.box-3 {
+        border-bottom-left-radius: 0;
+        border-top-style: solid;
+        border-left-style: none;
+    }
+
+    .box.box-4 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-style: solid;
+        border-left-style: none;
+    }
+
     .grid-tier-info {
         background-color: coral;
     }
