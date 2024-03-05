@@ -56,6 +56,11 @@ table {
     color: inherit
 }
 
+.container-fluid div.row div.main-col {
+    min-width: 300px;
+    max-width: 1300px;
+}
+
 .center-content, #login-form-container {
     display: flex;
     justify-content: center;
