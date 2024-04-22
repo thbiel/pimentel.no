@@ -1,0 +1,49 @@
+body {
+    color: #fff;
+    background-color: #83538F;
+    font-family: "Albert Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 0.928em;
+    text-align: center;
+    padding-bottom: 12px;
+    letter-spacing: 8px;
+}
+
+h2 {
+    font-size: 32px;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 24px;
+    padding-bottom: 6px;
+}
+
+h4 {
+    font-size: 18px;
+    padding-bottom: 4px;
+}
+
+h5 {
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant SC', serif;
+    color: inherit;
+    font-weight: 400
+}
+
+a {
+    color: inherit
+}
+
