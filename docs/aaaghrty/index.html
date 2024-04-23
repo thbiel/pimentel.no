@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&family=Cormorant+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&family=Cormorant+SC:wght@100:200:300;400;500;600;700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700" rel="stylesheet">
 
     <link rel="stylesheet" href="_css/main.css">
@@ -24,6 +24,7 @@
           extend: {
             fontFamily: {
               sans: ['"Albert Sans"', 'sans-serif'],
+              serif: ['"Cormorant SC"', 'serif'],
             },
           },
         }
@@ -40,7 +41,11 @@
       @tailwind utilities;
 
       .stripe {
-        @apply w-4/5 xl:w-2/3 mx-auto p-3;
+        @apply w-4/5 xl:w-2/3 mx-auto py-12;
+      }
+
+      .stripe.no-padding {
+        @apply p-0 !important;
       }
 
 
@@ -65,24 +70,27 @@
         background-color: #83538F;
       }
 
+
+
       .font-family-headings {
-        @apply font-['Cormorant_SC']
+        @apply font-serif;
       }
 
       @layer base {
         h1 {
-          @apply text-5xl text-center;
+          @apply text-5xl font-sans font-light text-center pb-12;
           line-height: 0.928em;
-          padding-bottom: 12px;
-          letter-spacing: 8px;
+          margin-top: 8px;
+          letter-spacing: 5px;
         }
 
         h2 {
           font-size: 32px;
           padding-bottom: 8px;
+          margin-top: 18px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h2, h3, h4, h5, h6 {
           @apply font-family-headings;
           font-weight: 400;
         }
@@ -122,13 +130,14 @@
       }
 
       #behandlinger div.heading {
-        font-weight: 100;
-        font-size: 22px;
+        @apply font-serif;
+        font-weight: 200;
+        font-size: 25px;
         padding-bottom: 14px;
       }
 
       #behandlinger img {
-        _swidth: 90%;
+        _width: 90%;
         border-radius: 50%;
       }
 
@@ -154,14 +163,13 @@
         text-decoration: underline;
       }
 
-
     </style>
   </head>
 
   <body class="colors-main text-default">
 
     <div>
-      <div id="header" class="stripe">
+      <div id="header" class="stripe no-padding">
 
         <div class="flex flex-row items-center top-menu">
           <div class="">
@@ -181,9 +189,9 @@
     </div>
 
     <div class="colors-secondary">
-      <div class="stripe flex items-center p-0 m-0">
+      <div class="stripe no-padding flex items-center">
         <div class="slogan w-2/3">Velkommen til <span class="font-bold">Pimentel Beauty</span> – hvor din skjønnhet og velvære er vår prioritet!</div>
-        <div class="p-0 m-0">
+        <div>
           <img src="../images/illustrations/modell/modell-01-iStock-1427471475_transparent.png" width="400" class="p-0 m-0"/>
         </div>
       </div>
@@ -191,7 +199,7 @@
 
     <div>
       <div class="stripe">
-        <h2>Behandlinger</h2>
+        <h1>Behandlinger</h1>
         <div class="">
           <div id="behandlinger" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="text-center">
@@ -233,10 +241,13 @@
     </div>
 
     <div>
-      <div class="stripe w-full mx-0 px-0">
-        <iframe class="w-full mx-0 px-0" id="myIframe" src="https://bestill.timma.no/reservation/pimentel-beauty" allow="accelerometer; gyroscope" width="100%"></iframe>
-        <!-- https://www.smashingmagazine.com/2018/12/feature-policy/ -->
-        <script>iFrameResize({log: true, checkOrigin: 'https://bestill.timma.no'}, '#myIframe')</script>
+      <div class="stripe">
+        <h1>Bestill time</h1>
+        <div>
+          <iframe class="w-full mx-0 px-0" id="myIframe" src="https://bestill.timma.no/reservation/pimentel-beauty" allow="accelerometer; gyroscope" width="100%"></iframe>
+          <!-- https://www.smashingmagazine.com/2018/12/feature-policy/ -->
+          <script>iFrameResize({log: true, checkOrigin: 'https://bestill.timma.no'}, '#myIframe')</script>
+        </div>
       </div>
     </div>
 
