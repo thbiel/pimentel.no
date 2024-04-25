@@ -41,7 +41,7 @@
       @tailwind utilities;
 
       .stripe {
-        @apply w-4/5 xl:w-2/3 mx-auto py-12;
+        @apply w-11/12 md:w-4/5 xl:w-2/3 mx-auto py-12;
       }
 
       .stripe.no-padding {
@@ -79,6 +79,7 @@
       @layer base {
         h1 {
           @apply text-5xl font-sans font-light text-center pb-12;
+          @apply scale-75 md:scale-100;
           line-height: 0.928em;
           margin-top: 8px;
           letter-spacing: 5px;
@@ -126,7 +127,7 @@
       }
 
       .slogan {
-        @apply text-4xl;
+        @apply text-2xl sm:text-4xl;
       }
 
       #behandlinger div.heading {
@@ -175,9 +176,9 @@
           <div>
             <a href=qpdf35av/index.html><img src="graphics/logo/logo-transparent-black-text.png" class="max-w-28"></a>
           </div>
-          <div class="flex justify-left w-full pl-12">
-            <span class="menu-item"><a href="qpdf35av/om.html">Om</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <span class="menu-item"><a href="qpdf35av/behandlinger.html">Behandlinger</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <div class="flex justify-left w-full pl-12 hidden md:block">
+            <span class="menu-item"><a href="index.html#om">Om</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            <span class="menu-item"><a href="index.html#behandl">Behandlinger</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
             <span class="menu-item"><a href="qpdf35av/blogg.html">Blogg</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <div>
               <a href="index.html#bestill" class="button">Bestill time</a>
@@ -190,8 +191,8 @@
 
     <div class="colors-secondary">
       <div class="stripe no-padding flex items-center">
-        <div class="slogan w-2/3">Velkommen til <span class="font-bold">Pimentel Beauty</span> – hvor din skjønnhet og velvære er vår prioritet!</div>
-        <div>
+        <div class="slogan w-2/3 m-0 p-0"><p>Velkommen til <span class="font-bold">Pimentel Beauty</span> – hvor din skjønnhet og velvære er vår prioritet!</p></div>
+        <div class="w-full">
           <img src="../images/illustrations/modell/modell-01-iStock-1427471475_transparent.png" width="400" class="p-0 m-0"/>
         </div>
       </div>
@@ -199,13 +200,13 @@
 
     <div>
       <div class="stripe">
-        <h1>Behandlinger</h1>
+        <h1><a id="behandl">Behandlinger</a></h1>
         <div class="">
-          <div id="behandlinger" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div id="behandlinger" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="text-center">
               <a href="qpdf35av/behandling-microblading.html">
                 <div class="heading">Microblading</div>
-                <div><img src="../images/illustrations/behandlinger/microblading-01_2_iStock-1406887586_square.jpg"/></div>
+                <div><img class="sm:scale-25 md:scale-100" src="../images/illustrations/behandlinger/microblading-01_2_iStock-1406887586_square.jpg"/></div>
                 <p class="nowrap"><span class="text bold">Fra kr. 1300,-</span><br/><span class="text">Se behandlinger</span></p>
               </a>
             </div>
@@ -254,7 +255,7 @@
     <div>
       <div class="stripe">
         <article>
-          <h2>Vitae sapien pellentesque</h2>
+          <h2><a id="om">Om Pimentel Beauty</a></h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
