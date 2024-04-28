@@ -18,164 +18,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Albert Sans"', 'sans-serif'],
-              serif: ['"Cormorant SC"', 'serif'],
-            },
-          },
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Albert Sans"', 'sans-serif'],
+                        serif: ['"Cormorant SC"', 'serif'],
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                        marquee2: 'marquee2 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': {transform: 'translateX(0%)'},
+                            '100%': {transform: 'translateX(-100%)'},
+                        },
+                        marquee2: {
+                            '0%': {transform: 'translateX(100%)'},
+                            '100%': {transform: 'translateX(0%)'},
+                        },
+                    },
+                },
+            }
         }
-      }
     </script>
 
     <style type="text/tailwindcss">
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
 
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      .stripe {
-        @apply w-11/12 md:w-4/5 xl:w-2/3 mx-auto py-12;
-      }
-
-      .stripe.no-padding {
-        @apply p-0 !important;
-      }
-
-      .text-default {
-        @apply font-light;
-        font-size: 19px;
-      }
-
-      .colors-main {
-        /*@apply bg-pink-100 text-blue-600;*/
-        /*@apply bg-purple-100 text-zinc-700;*/
-        @apply bg-purple-100 text-fuchsia-950;
-        _color: #fff;
-        _background-color: #83538F;
-      }
-
-      .colors-secondary {
-        /*@apply bg-violet-500 text-white;*/
-        /*@apply bg-fuchsia-700;*/
-        color: #fff;
-        _background-color: #564774;
-        background-color: #83538F;
-      }
-
-      .font-family-headings {
-        @apply font-serif;
-      }
-
-      @layer base {
-        h1 {
-          @apply text-5xl font-sans font-light text-center pb-12;
-          @apply scale-75 md:scale-100;
-          line-height: 0.928em;
-          margin-top: 8px;
-          letter-spacing: 5px;
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        h2 {
-          font-size: 32px;
-          padding-bottom: 8px;
-          margin-top: 18px;
+        a, a.button {
+            text-decoration: none;
         }
 
-        h2, h3, h4, h5, h6 {
-          @apply font-family-headings;
-          font-weight: 400;
+        a:hover, a.button:hover {
+            text-decoration: underline;
+            text-decoration-style: dotted;
         }
-      }
 
-      hr {
-        opacity: 0.25;
-      }
 
-      .nowrap {
-        white-space: nowrap;
-      }
+        /*body > section > div {*/
+        /*  @apply mx-auto;*/
+        /*  @apply w-11/12 md:w-4/5 xl:w-2/3;*/
+        /*  @apply py-12;*/
+        /*}*/
 
-      .menu-item a {
-        text-decoration: none;
-        font-family: 'Cormorant SC', serif;
-        font-size: 22px;
-        font-weight: 300;
-      }
+        body > section > div.container {
+            @apply mx-auto;
+            @apply py-12;
+            @apply w-11/12 md:w-4/5 xl:w-2/3;
+        }
 
-      .button {
-        @apply font-sans;
-        padding: 12px;
-        border-radius: 1.2rem;
-        border: 1px solid #9b75a5;
-        _background-color: #564774;
-        _color: white;
-        @apply colors-secondary;
-        font-weight: 500;
-        font-size: 16px;
-        white-space: nowrap;
-        letter-spacing: 1px;
-      }
+        div.no-padding {
+            @apply p-0 !important;
+        }
 
-      .slogan {
-        @apply text-2xl sm:text-4xl;
-      }
+        .text-default {
+            @apply font-light;
+            font-size: 19px;
+        }
 
-      #behandlinger div.heading {
-        @apply font-serif;
-        font-weight: 200;
-        font-size: 25px;
-        padding-bottom: 14px;
-      }
+        .colors-main {
+            @apply bg-purple-100;
+            @apply text-fuchsia-950;
+        }
 
-      #behandlinger img {
-        _width: 90%;
-        border-radius: 50%;
-      }
+        .colors-secondary {
+            color: #fff;
+            _background-color: #564774;
+            background-color: #83538F;
+        }
 
-      #behandlinger p {
-        padding-top: 10px;
-        margin-bottom: 0;
-      }
+        .font-family-headings {
+            @apply font-serif;
+        }
 
-      #behandlinger div.text, #behandlinger span.text {
-        font-weight: 400;
-        font-size: 16px;
-      }
+        @layer base {
+            h1 {
+                @apply text-5xl font-sans font-light ;
+                @apply text-center pb-12;
+                @apply scale-75 md:scale-100;
+                line-height: 0.928em;
+                margin-top: 8px;
+                letter-spacing: 5px;
+            }
 
-      #behandlinger div.text.bold, #behandlinger span.text.bold {
-        font-weight: 700;
-      }
+            h2 {
+                font-size: 32px;
+                padding-bottom: 8px;
+                margin-top: 18px;
+            }
 
-      #behandlinger a, a.button {
-        text-decoration: none;
-      }
+            h2, h3, h4, h5, h6 {
+                @apply font-family-headings;
+                font-weight: 400;
+            }
+        }
 
-      #behandlinger a:hover, a.button:hover {
-        text-decoration: underline;
-      }
+        hr {
+            opacity: 0.25;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .menu-item a {
+            font-family: 'Cormorant SC', serif;
+            font-size: 22px;
+            font-weight: 300;
+        }
+
+        .button {
+            @apply font-sans;
+            padding: 12px;
+            border-radius: 1.2rem;
+            border: 1px solid #9b75a5;
+            _background-color: #564774;
+            _color: white;
+            @apply colors-secondary;
+            font-weight: 500;
+            font-size: 16px;
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+
+        .slogan {
+            @apply text-2xl sm:text-4xl;
+        }
+
+        #behandlinger p {
+            font-weight: 400;
+            font-size: 16px;
+            padding-top: 10px;
+            margin-bottom: 0;
+        }
+
+        #behandlinger p.heading {
+            @apply font-serif;
+            @apply leading-none;
+            font-weight: 200;
+            font-size: 25px;
+            padding-bottom: 14px;
+        }
+
+        #behandlinger img {
+            border-radius: 50%;
+            @apply xl:max-w-64;
+        }
+
     </style>
   </head>
 
   <body class="colors-main text-default">
 
-    <div>
-      <div id="header" class="stripe no-padding">
-
+    <section id="header">
+      <div class="container no-padding">
         <div class="flex flex-row items-center top-menu pb-3">
           <div>
-            <a href=index.html><img src="graphics/logo/logo-transparent-black-text.png" class="max-w-28"></a>
+            <a href="index.html"><img src="graphics/logo/logo-transparent-black-text.png" class="max-w-28" alt="Logo"></a>
           </div>
           <div class="flex pl-12 hidden md:flex">
             <div class="menu-item"><a href="index.html#om">Om</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
             <div class="menu-item"><a href="index.html#behandl">Behandlinger</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-            <div class="menu-item"><a href="blogg.html">Blogg</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="menu-item"><a href="blogg.html">Blogg</a></a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+            <div class="menu-item"><a href="#kontakt">Kontakt</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <div>
               <a href="#bestill" class="button">Bestill time</a>
             </div>
@@ -183,39 +197,27 @@
           <hr/>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div>
-      <div class="stripe">
+    <section id="behandling">
+      <div class="container">
         <h2>Permanent make-up</h2>
         <article>
           <p>Pimentel Beauty er stolt av å tilby profesjonelle tjenester innen permanent makeup, spesialisert på bryn, lepper, og eyeliner. Med fokus på skjønnhet og presisjon, skreddersyr jeg hver behandling for å matche dine unike trekk og ønsker. Enten du drømmer om perfekt formete øyenbryn, fyldigere lepper, eller en definert eyeliner som holder fra morgen til kveld, kan jeg hjelpe deg med å oppnå det utseendet du alltid har ønsket deg. Ved å bruke de nyeste teknikkene og høykvalitetsprodukter, sikrer jeg et naturlig og langvarig resultat. La meg hjelpe deg med å forsterke din naturlige skjønnhet, og opplev gleden ved å se strålende ut hver dag, uten ekstra tid brukt foran speilet.</p>
         </article>
       </div>
-    </div>
+    </section>
 
-    <div class="colors-secondary">
-      <div class="stripe no-padding">
+    <section class="colors-secondary">
+      <div class="container no-padding">
         <div class="illustration center">
           <img src="../images/illustrations/behandlinger/permanent-makeup-01_iStock-1357522797.jpg" width="1054"/>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div>
-      <div class="stripe">
-        <h1><a id="bestill">Bestill time</a></h1>
-        <div>
-          <iframe class="w-full mx-0 px-0" id="myIframe" src="https://bestill.timma.no/reservation/pimentel-beauty" allow="accelerometer; gyroscope" width="100%"></iframe>
-          <!-- https://www.smashingmagazine.com/2018/12/feature-policy/ -->
-          <script>iFrameResize({log: true, checkOrigin: 'https://bestill.timma.no'}, '#myIframe')</script>
-        </div>
-      </div>
-    </div>
-
-
-    <div>
-      <div class="stripe">
+    <section id="kontakt">
+      <div class="container">
         <hr/>
         <h2>Kontakt</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -229,15 +231,20 @@
           </div>
           <div>
             <h4>E-post</h4>
-            <div class="nowrap"><span class="fa-regular fa-envelope" style="margin-right: 12px;"></span><span><a href="mailto:roalpim@gmail.com" target="_blank" class="link">post@pimentel.no</a></span></div>
+            <div class="nowrap">
+              <span class="fa-regular fa-envelope" style="margin-right: 12px;"></span>
+              <span><a href="mailto:post@pimentel.no" target="_blank" class="link">post@pimentel.no</a></span>
+            </div>
           </div>
           <div>
             <h4>Sosiale medier</h4>
-            <div class="nowrap"><a href="https://www.facebook.com/pimentelbeauty" target="_blank"><span class="fa-brands fa-facebook fa-2x"></span></a><a href="https://www.instagram.com/pimentelbeauty_/" target="_blank"><span class="fa-brands fa-instagram fa-2x" style="margin-left: 20px;"></span></a></div>
+            <div class="nowrap"><a href="https://www.facebook.com/pimentelbeauty" target="_blank"><span class="fa-brands fa-facebook fa-2x"></span></a><a
+                 href="https://www.instagram.com/pimentelbeauty_/" target="_blank"><span class="fa-brands fa-instagram fa-2x" style="margin-left: 20px;"></span></a></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
   </body>
 
 </html>
