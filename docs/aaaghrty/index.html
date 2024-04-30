@@ -63,6 +63,11 @@
             text-decoration-style: dotted;
         }
 
+        .anchor-dotted a {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
         article p {
             @apply pt-4;
             @apply md:leading-loose;
@@ -221,7 +226,7 @@
         </div>
 
         <div id="navbar-mobile" class="flex justify-center hidden pt-4 pb-4 border-t border-fuchsia-950">
-          <div class="flex flex-col" onclick="toggleMobileNavbar()">
+          <div class="flex flex-col anchor-dotted" onclick="toggleMobileNavbar()">
             <div class="menu-item"><a href="index.html#about">Om</a></div>
             <div class="menu-item"><a href="index.html#behandl">Behandlinger</a></div>
             <div class="menu-item"><a href="blogg.html">Blogg</a></div>
