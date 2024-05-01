@@ -81,7 +81,7 @@
         body > section > div.container {
             @apply mx-auto;
             @apply py-12;
-            @apply w-11/12 md:w-4/5 xl:w-2/3;
+            @apply w-11/12 md:w-4/5 2xl:w-3/4;
             @apply xl:max-w-[1100px] 2xl:max-w-[1100px];
         }
 
@@ -103,6 +103,7 @@
             color: #fff;
             _background-color: #564774;
             background-color: #83538F;
+            __background-color: #826B89;
         }
 
         .font-family-headings {
@@ -123,6 +124,7 @@
                 font-size: 32px;
                 padding-bottom: 8px;
                 margin-top: 18px;
+                letter-spacing: 1px;
             }
 
             h3 {
@@ -193,6 +195,16 @@
         }
     </style>
 
+    <script>
+        function toggleMobileNavbar() {
+            let x = document.getElementById("navbar-mobile");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
   </head>
 
   <body class="colors-main text-default">
@@ -200,20 +212,34 @@
     <section id="header">
       <div class="container no-padding">
         <div class="flex flex-row items-center top-menu pb-3">
-          <div>
+          <div class="bg-black-300">
             <a href="index.html"><img src="graphics/logo/logo-transparent-black-text.png" class="max-w-28" alt="Logo"></a>
           </div>
-          <div class="flex pl-12 hidden md:flex">
-            <div class="menu-item"><a href="index.html#om">Om</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+          <div class="flex hidden md:flex md:pl-12">
+            <div class="menu-item"><a href="index.html#about">Om</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
             <div class="menu-item"><a href="index.html#behandl">Behandlinger</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-            <div class="menu-item"><a href="blogg.html">Blogg</a></a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+            <div class="menu-item"><a href="blogg.html">Blogg</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div>
             <div class="menu-item"><a href="#kontakt">Kontakt</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <div>
-              <a href="#bestill" class="button">Bestill time</a>
-            </div>
           </div>
+          <div class="mx-auto md:mx-0">
+            <a href="#bestill" class="button">Bestill time</a>
+          </div>
+          <div class="md:hidden" onclick="toggleMobileNavbar()">
+            <i class="fa-solid fa-bars fa-xl text-[#83538F]"></i>
+          </div>
+
           <hr/>
         </div>
+
+        <div id="navbar-mobile" class="flex justify-center hidden pt-4 pb-4 border-t border-fuchsia-950">
+          <div class="flex flex-col anchor-dotted" onclick="toggleMobileNavbar()">
+            <div class="menu-item"><a href="index.html#about">Om</a></div>
+            <div class="menu-item"><a href="index.html#behandl">Behandlinger</a></div>
+            <div class="menu-item"><a href="blogg.html">Blogg</a></div>
+            <div class="menu-item"><a href="#kontakt">Kontakt</a></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
