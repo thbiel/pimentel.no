@@ -81,7 +81,7 @@
         body > section > div.container {
             @apply mx-auto;
             @apply py-12;
-            @apply w-11/12 md:w-4/5 xl:w-2/3;
+            @apply w-11/12 md:w-4/5 2xl:w-3/4;
             @apply xl:max-w-[1100px] 2xl:max-w-[1100px];
         }
 
@@ -103,6 +103,7 @@
             color: #fff;
             _background-color: #564774;
             background-color: #83538F;
+            __background-color: #826B89;
         }
 
         .font-family-headings {
@@ -123,6 +124,7 @@
                 font-size: 32px;
                 padding-bottom: 8px;
                 margin-top: 18px;
+                letter-spacing: 1px;
             }
 
             h3 {
@@ -315,15 +317,21 @@
       </div>
     </section>
 
+    <section id="screen-size">
+      <div class="container">
+        <p class="text-center"><span class="block sm:hidden">XS</span> <span class="hidden sm:block md:hidden">SM</span> <span class="hidden md:block lg:hidden">MD</span> <span
+             class="hidden lg:block xl:hidden">LG</span> <span class="hidden xl:block 2xl:hidden">XL</span> <span class="hidden 2xl:block">2XL</span></p>
+      </div>
+    </section>
+
     <section id="about">
       <div class="container">
         <article>
-          <div class="flex flex-col-reverse md:flex-row mt-4">
-            <div class="flex w-full md:w-1/2 md:space-x-3 mt-6 md:mr-12">
-              <img class="w-1/2" src="../images/illustrations/roberta/roberta-01.jpg" alt="Roberta Pimentel"/>
-              <img class="w-1/2" src="../images/illustrations/roberta/roberta-in-action-01.jpg" alt="Roberta Pimentel i aksjon"/>
+          <div class="flex flex-col xl:flex-row mt-4">
+            <div class="hidden xl:flex mt-6">
+              <img class="object-scale-down max-w-[260px]" src="../images/illustrations/roberta/roberta-01.jpg" alt="Roberta Pimentel"/>
             </div>
-            <div class="md:w-1/2">
+            <div class="xl:px-12">
               <h2>Om Pimentel Beauty</h2>
               <p>
                 Velkommen til Pimentel Beauty!
@@ -332,6 +340,13 @@
                 Besøk oss i Ski for en unik og tilfredsstillende opplevelse.
                 Kontakt oss gjerne for spørsmål eller for å booke en time!
               </p>
+            </div>
+            <div class="hidden xl:flex mt-6 xl:mr-12">
+              <img class="object-scale-down xl:max-w-[260px]" src="../images/illustrations/roberta/roberta-in-action-01.jpg" alt="Roberta Pimentel i aksjon"/>
+            </div>
+            <div class="flex xl:hidden w-full space-x-3 mt-6">
+              <img class="w-1/2" src="../images/illustrations/roberta/roberta-01.jpg" alt="Roberta Pimentel"/>
+              <img class="w-1/2" src="../images/illustrations/roberta/roberta-in-action-01.jpg" alt="Roberta Pimentel i aksjon"/>
             </div>
           </div>
         </article>
