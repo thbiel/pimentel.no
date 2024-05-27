@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="no" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pimentel Beauty</title>
+
+    <base href="../">
+
+    <script src="https://kit.fontawesome.com/72b61347b5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&family=Cormorant+SC:wght@100:200:300;400;500;600;700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Albert Sans"', 'sans-serif'],
+                        serif: ['"Cormorant SC"', 'serif'],
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                        marquee2: 'marquee2 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': {transform: 'translateX(0%)'},
+                            '100%': {transform: 'translateX(-100%)'},
+                        },
+                        marquee2: {
+                            '0%': {transform: 'translateX(100%)'},
+                            '100%': {transform: 'translateX(0%)'},
+                        },
+                    },
+                },
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a, a.button {
+            text-decoration: none;
+        }
+
+        a:hover, a.button:hover {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
+        .anchor-dotted a {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
+        article p {
+            @apply pb-4;
+            @apply md:leading-loose;
+        }
+
+        article a {
+            @apply underline decoration-dotted;
+        }
+
+
+        body > section > div.container {
+            @apply mx-auto;
+            @apply py-12;
+            @apply w-11/12 md:w-4/5 2xl:w-3/4;
+            @apply xl:max-w-[1100px] 2xl:max-w-[1100px];
+        }
+
+        div.no-padding {
+            @apply p-0 !important;
+        }
+
+        .text-default {
+            @apply font-light;
+            font-size: 19px;
+        }
+
+        .colors-main {
+            @apply bg-purple-100;
+            @apply text-fuchsia-950;
+        }
+
+        .colors-secondary {
+            color: #fff;
+            _background-color: #564774;
+            background-color: #83538F;
+            __background-color: #826B89;
+        }
+
+        .font-family-headings {
+            @apply font-serif;
+        }
+
+        @layer base {
+            h1 {
+                @apply text-5xl font-sans font-light;
+                @apply text-center pb-12;
+                @apply scale-75 md:scale-100;
+                line-height: 0.928em;
+                margin-top: 8px;
+                letter-spacing: 5px;
+            }
+
+            h2 {
+                font-size: 32px;
+                padding-bottom: 8px;
+                margin-top: 18px;
+                letter-spacing: 1px;
+            }
+
+            h3 {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            h2, h3, h4, h5, h6 {
+                @apply font-family-headings;
+                font-weight: 400;
+            }
+        }
+
+        hr {
+            opacity: 0.25;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .menu-item a {
+            font-family: 'Cormorant SC', serif;
+            font-size: 22px;
+            font-weight: 300;
+        }
+
+        .button {
+            @apply font-sans;
+            padding: 12px;
+            border-radius: 1.2rem;
+            border: 1px solid #9b75a5;
+            _background-color: #564774;
+            _color: white;
+            @apply colors-secondary;
+            font-weight: 500;
+            font-size: 16px;
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+
+        .button.secondary {
+            @apply colors-main;
+        }
+
+        .slogan {
+            @apply text-2xl sm:text-4xl;
+        }
+
+        #behandlinger p {
+            font-weight: 400;
+            font-size: 16px;
+            padding-top: 10px;
+            margin-bottom: 0;
+        }
+
+        #behandlinger p.heading {
+            @apply font-serif;
+            @apply leading-none;
+            font-weight: 200;
+            font-size: 25px;
+            padding-bottom: 14px;
+        }
+
+        #behandlinger img {
+            border-radius: 50%;
+            @apply xl:max-w-64;
+        }
+    </style>
+  </head>
+
+  <body class="colors-main text-default">
+
+    <section id="page-heanding">
+      <div class="container">
+        <article>
+          <h1>Vilkår for kjøp av kurs</h1>
+          <p><span class="firmanavn">Pimentel AS</span> gjør det enkelt, sikkert og fritt for ubehagelige overraskelser ved kjøp. Under ser du våre fullstendige vilkår for kjøp av kurs fra oss. Disse vilkårene gjelder kun for kjøp av kurs, ikke kjøp av behandlinger (som er dekket av egne kjøpsvilkår).</p>
+
+          <div>
+            <h3>Angrefrist for kurs</h3>
+            <p>Våre kurs har ikke angrefrist med mindre dette har blitt opplyst om under kjøpsprosessen/på kjøpssiden. Eventuell angrefrist vil kun gjelde i henhold til de betingelser som er gitt på
+              kjøpssiden eller i kjøpsprosessen.
+            </p>
+          </div>
+
+          <div class="hidden">
+            <h3>Garantier</h3>
+            <p>Eventuelle garantier som er gitt i forbindelse med kjøp av produktet, kan kun benyttes dersom forutsetningene for garantien oppfylles og at det gis skriftlig beskjed til oss innen
+              garantien utløper. Ønsker du å benytte deg av eventuell avtalt garanti ber vi deg om å dokumentere at du har gjennomført din del av avtalen. Ved bruk av garantien blir all tilgang til
+              kursportalen og tilhørende tjenester stoppet som følge av tilbakebetalt kursbeløp.
+            </p>
+          </div>
+
+          <div>
+            <h3>Kortbetaling</h3>
+            <p>Vi aksepterer Visa, MasterCard, American Express og Discover & Diners Club gjennom våre samarbeidspartnere Stripe og Paypal. Alle transaksjoner sendes kryptert via SSL (Secure Sockets
+              Layer) og er 100% sikre. Kortkjøp er avgiftsfritt. Dersom avtalte beløp/trekk ikke blir autorisert og betaling uteblir, vil utestående beløp sendes videre til fakturering og inkasso.
+            </p>
+          </div>
+
+          <div>
+            <h3>Betaling med faktura</h3>
+            <p>Et kjøp som gjøres med faktura er å anse som bindende og skal betales inn i sin helhet innen fristens utløp. Dersom faktura ikke blir betalt innen betalingsfristen vil beløp sendes
+              videre til purring og eventuelt inkasso.
+            </p>
+          </div>
+
+          <div>
+            <h3>Delbetaling og avdragsordning</h3>
+            <p>Et kjøp som gjøres med en avdragsordning, enten skriftlig eller muntlig, er å anse som bindende og skal betales inn i sin helhet innen fristens utløp. Dersom avdrag ikke blir betalt inn
+              innen avtalt tid vil utestående beløp sendes videre til fakturering og inkasso.
+            </p>
+          </div>
+
+          <div>
+            <h3>Salg til mindreårige</h3>
+            <p>Hvis du er under 18 år, må du ha tillatelse fra verge for å bestille fra oss.</p>
+          </div>
+
+          <div>
+            <h3>Konfidensialitet</h3>
+            <p>Vi respekterer ditt privatliv, og må insistere på at du respekterer privatlivet til andre som deltar på kurset. Dermed er dette en gjensidig avtale om taushetsplikt. Vi respekterer din
+              konfidensielle og fortrolige informasjon og ideer, planer og forretningshemmeligheter. Ved å kjøpe dette produktet samtykker du i å respektere de samme rettighetene til kursdeltakere og
+              representanter for <span class="firmanavn">Pimentel AS</span> og ansatte hos dets partnere.
+            </p>
+            <p>Du står fritt til å diskutere dine personlige resultater fra våre kurs og oppgaver. Derimot må all erfaring og uttalelser, muntlig eller skriftlig, fra alle andre deltakere eller <span
+                 class="firmanavn">Pimentel AS</span>-teamet holdes strengt konfidensielt.
+            </p>
+          </div>
+
+          <div>
+            <h3>Sikkerhet og personvern</h3>
+            <p>Vi benytter SSL, hvilket betyr at alle bestillinger er kryptert, dvs. helt sikre. <span class="firmanavn">Pimentel AS</span> garanterer at vi aldri leverer ut dine
+              personopplysninger eller e-postadresse til tredjepart, så fremt det ikke foreligger spesielle grunner, f.eks. at politi, statsadvokat eller liknende ber om opplysninger. Du har rett til
+              å få den informasjon vi har registrert om deg, og hvis du mener den er feilaktig eller irrelevant, kan du be om rettelse eller fjerning fra vårt kunderegister. Kontakt i så fall
+              kundeservice.
+            </p>
+            <p>Dette kan du lese mer om i vår personvernerklæring: <a href="/personvernerklaering" target="_blank" rel="noopener noreferrer" class="bedrift-spesifikk"><span class="bedrift-spesifikk">https://pimentel.no/personvernerklaering</span></a>
+            </p>
+          </div>
+
+          <div>
+            <h3>Avlysing og utsettelse</h3>
+            <p><span class="firmanavn">Pimentel AS</span> forbeholder seg retten til å avlyse eller utsette kurset som følge av årsaker som er utenfor <span class="firmanavn">Pimentel AS</span>s
+              kontroll. Ved avlysning av kurset vil kursdeltakeren få kursbeløpet refundert. Ved utsettelse av kurset vil kursdeltakeren kunne velge å få kursbeløpet refundert eller få deltakelse på
+              et senere tidspunkt.
+            </p>
+          </div>
+
+          <div>
+            <h3>Ansvarsbegrensing</h3>
+            <p><span class="firmanavn">Pimentel AS</span> og våre partnere fraskriver oss alle økonomiske krav knyttet til våre kurs. Vi har vi gjort alt vi kan for å sikre at innholdet har høy
+              kvalitet. Ved å kjøpe dette kurset aksepterer og godtar du, at du er fullt ut ansvarlig for din fremgang og resultater fra deltakelse på kurset. Vi tilbyr ingen garantier om inntekter
+              eller resultater. Du alene er ansvarlig for dine handlinger, og dine resultater er avhengig av personlige faktorer, inkludert dine ferdigheter, kunnskap, evne, engasjement,
+              forretningssans, nettverk og økonomiske situasjon, for å nevne noen.
+            </p>
+          </div>
+
+          <div>
+            <h3>Avtalen</h3>
+            <p>Denne avtalen kan ikke overdras av noen av partene.</p>
+          </div>
+
+          <div>
+            <h3>Tvisteløsning</h3>
+            <p>Hvis tvisten ikke løses først ved forhandlinger mellom partene, vil en uenighet eller tvist i forbindelse med denne avtalen kunne sendes til forliksrådet eller retten. </p>
+          </div>
+
+          <div>
+            <h3>Varsel</h3>
+            <p>Eventuelle varsler om uenighet som gis fra en av partene til den andre, kan skje ved personlig overlevering eller per post, registrert eller sertifisert med kvittering. Varselet skal
+              sendes til partene på adressene som vises nedenfor.
+            </p>
+          </div>
+
+          <div>
+            <h3>Force majeur</h3>
+            <p>Er <span class="firmanavn">Pimentel AS</span> eller dets partnere forhindret fra å levere eller foreta pliktig omlevering - eller blir en slik leveringsplikt urimelig tyngende som følge
+              av arbeidskonflikt eller enhver annen omstendighet når partene ikke kan råde over den, så som brann, krig, mobilisering eller uforutsette militære innkallelser av tilsvarende omfang,
+              rekvisisjon, beslag, valutarestriksjoner, opprør og oppløp, knapphet på transportmidler, alminnelig vareknapphet, innskrenkning i tilførselen av drivkraft, samt mangler ved eller
+              forsinkelser av leveranser fra underleverandører eller produsenter som følge av slike omstendigheter som omhandles i dette punkt, er <span class="firmanavn">Pimentel AS</span> fritatt
+              for alt annet ansvar enn i reklamasjonstilfeller der <span class="firmanavn">Pimentel AS</span> refunderer den mangelfulle vares kjøpesum.
+            </p>
+          </div>
+
+          <div>
+            <h3>Adresser og kontaktpersoner for selskapet er som følger:</h3>
+            E-post: post@pimentel.no<br/>
+            Postadresse: Eplehagen 43, 1424 Ski<br/>
+            Org.nr: 922704864 MVA<br/>
+            <br/>
+            <p>Denne avtalen skal reguleres av og tolkes i samsvar med gjeldende norsk lov. </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
