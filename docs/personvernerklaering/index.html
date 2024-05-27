@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="no" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pimentel Beauty</title>
+
+    <base href="../">
+
+    <script src="https://kit.fontawesome.com/72b61347b5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&family=Cormorant+SC:wght@100:200:300;400;500;600;700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Albert Sans"', 'sans-serif'],
+                        serif: ['"Cormorant SC"', 'serif'],
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                        marquee2: 'marquee2 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': {transform: 'translateX(0%)'},
+                            '100%': {transform: 'translateX(-100%)'},
+                        },
+                        marquee2: {
+                            '0%': {transform: 'translateX(100%)'},
+                            '100%': {transform: 'translateX(0%)'},
+                        },
+                    },
+                },
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a, a.button {
+            text-decoration: none;
+        }
+
+        a:hover, a.button:hover {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
+        .anchor-dotted a {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
+        article p {
+            @apply pb-4;
+            @apply md:leading-loose;
+        }
+
+        article a {
+            @apply underline decoration-dotted;
+        }
+
+
+        body > section > div.container {
+            @apply mx-auto;
+            @apply py-12;
+            @apply w-11/12 md:w-4/5 2xl:w-3/4;
+            @apply xl:max-w-[1100px] 2xl:max-w-[1100px];
+        }
+
+        div.no-padding {
+            @apply p-0 !important;
+        }
+
+        .text-default {
+            @apply font-light;
+            font-size: 19px;
+        }
+
+        .colors-main {
+            @apply bg-purple-100;
+            @apply text-fuchsia-950;
+        }
+
+        .colors-secondary {
+            color: #fff;
+            _background-color: #564774;
+            background-color: #83538F;
+            __background-color: #826B89;
+        }
+
+        .font-family-headings {
+            @apply font-serif;
+        }
+
+        @layer base {
+            h1 {
+                @apply text-5xl font-sans font-light;
+                @apply text-center pb-12;
+                @apply scale-75 md:scale-100;
+                line-height: 0.928em;
+                margin-top: 8px;
+                letter-spacing: 5px;
+            }
+
+            h2 {
+                font-size: 32px;
+                padding-bottom: 8px;
+                margin-top: 18px;
+                letter-spacing: 1px;
+            }
+
+            h3 {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            h2, h3, h4, h5, h6 {
+                @apply font-family-headings;
+                font-weight: 400;
+            }
+        }
+
+        hr {
+            opacity: 0.25;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .menu-item a {
+            font-family: 'Cormorant SC', serif;
+            font-size: 22px;
+            font-weight: 300;
+        }
+
+        .button {
+            @apply font-sans;
+            padding: 12px;
+            border-radius: 1.2rem;
+            border: 1px solid #9b75a5;
+            _background-color: #564774;
+            _color: white;
+            @apply colors-secondary;
+            font-weight: 500;
+            font-size: 16px;
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+
+        .button.secondary {
+            @apply colors-main;
+        }
+
+        .slogan {
+            @apply text-2xl sm:text-4xl;
+        }
+
+        #behandlinger p {
+            font-weight: 400;
+            font-size: 16px;
+            padding-top: 10px;
+            margin-bottom: 0;
+        }
+
+        #behandlinger p.heading {
+            @apply font-serif;
+            @apply leading-none;
+            font-weight: 200;
+            font-size: 25px;
+            padding-bottom: 14px;
+        }
+
+        #behandlinger img {
+            border-radius: 50%;
+            @apply xl:max-w-64;
+        }
+    </style>
+  </head>
+
+  <body class="colors-main text-default">
+
+    <section id="page-heanding">
+      <div class="container">
+        <article>
+          <h1>Personvernerklæring</h1>
+          <div>
+            <h3>Introduksjon</h3>
+            <p><span class="firmanavn">Pimentel AS</span> (org.nr. <span class="bedrift-spesifikk">922704864</span>) er opptatt av å behandle personopplysninger på en betryggende og tillitsvekkende
+              måte i forbindelse med at du besøker og benytter våre nettsider på <span class="bedrift-spesifikk">pimentel.no</span>.
+            </p>
+            <p>Denne personvernerklæringen inneholder opplysninger du har krav på når det samles inn opplysninger fra nettsidene våre, og generell informasjon om hvordan vi behandler
+              personopplysninger.
+            </p>
+            <p>Hensikten er å informere deg om dine rettigheter, samt om våre retningslinjer og prosedyrer for behandling av personopplysningene vi mottar fra deg gjennom din bruk av våre
+              nettsider.
+            </p>
+            <p>Personvernerklæringen er underlagt norsk lov og vil kunne bli oppdatert fra tid til annen, blant annet som følge av endringer i gjeldende personvernlovgivning eller fordi tjenestene
+              tilgjengelig på nettsidene utvides eller endres. Vi vil varsle deg dersom dette krever nytt samtykke fra deg.
+            </p>
+            <p>Vennligst les denne erklæringen nøye for å få en klar forståelse av hvordan vi samler inn, bruker, beskytter eller på annen måte behandler dine personopplysninger.
+            </p>
+          </div>
+
+          <div>
+            <h3>Samtykke</h3>
+            <p>For å kunne benytte deg av tjenestene tilgjengelig på våre nettsider er det nødvendig at du gir oss visse etterspurte personopplysninger. Hvis du ikke ønsker å gi oss slike nødvendige
+              opplysninger, kan vi dessverre ikke gi deg tilgang til den forespurte tjenesten.
+            </p>
+            <p>Ved å bruke tjenester på våre nettsider, bekrefter du at du har lest og at du forstår og samtykker til innholdet i denne Personvernerklæringen og til vår behandling av dine
+              personopplysninger.
+            </p>
+            <p>Du kan når som helst trekke tilbake ditt samtykke ved å kontakte oss. Vær likevel oppmerksom på at dette kan føre til at vi ikke lenger kan levere våre tjenester til deg.
+            </p>
+            <p>Hvis barn under 16 år har gitt oss personopplysninger, vil vi slette opplysningene så snart vi blir oppmerksomme på forholdet. Foresatte kan kontakte oss.
+            </p>
+          </div>
+
+          <div>
+            <h3>Behandlingsansvarlig</h3>
+            <p><span class="firmanavn">Pimentel AS</span> ved <span class="bedrift-spesifikk">Roberta Pimentel Bieltvedt</span> er behandlingsansvarlig for behandlingen av personopplysninger i
+              forbindelse med vår virksomhet etter gjeldende personopplysninglovgivning. Med behandlingsansvarlig menes den som bestemmer formålet med behandlingen av personopplysninger og hvilke
+              hjelpemidler som skal benyttes. Det er behandlingsansvarlig som har det overordnede ansvaret for behandlingen av dine personopplysninger.
+            </p>
+          </div>
+
+          <div>
+            <h3>Hva er personopplysninger?</h3>
+            <p>Med personopplysninger menes informasjon som kan knyttes til en fysisk person, eksempelvis opplysninger om navn, bosted, telefonnummer og e-postadresse. Med behandling siktes det til
+              enhver bruk av personopplysninger, som f.eks. innsamling, registrering, sammenstilling, lagring og utlevering.
+            </p>
+          </div>
+
+          <div>
+            <h3>Hvilke personopplysninger behandler vi?</h3>
+            <p>Ved å benytte deg av våre tjenester på våre nettsider, vil vi kunne behandle dine personopplysninger, inkludert, men ikke begrenset til:
+            </p>
+            <ul class="list-inside list-disc bedrift-spesifikk">
+              <li>Navn</li>
+              <li>Adresse</li>
+              <li>Telefonnummer</li>
+              <li>Brukernavn</li>
+              <li>E-postadresse</li>
+              <li>Betalingshistorikk, inkludert dato og klokkeslett, beløp belastet, debet- kredittkortinformasjon og andre relaterte transaksjonsdetaljer</li>
+              <li>Informasjon om din bruk av våre nettsider, eksempelvis din søkehistorikk, hvilke undersider som besøkes</li>
+              <li>IP-adresser</li>
+              <li>Trafikkdata</li>
+              <li>Nettleserinnstillinger</li>
+              <li>Operativsystem</li>
+            </ul>
+            <p></p>
+          </div>
+
+          <div>
+            <h3>Slik innhentes informasjonen</h3>
+            <p>Vi behandler personopplysninger som du avgir via skjemaer på våre nettsider, eksempelvis:</p>
+            <ul class="list-inside list-disc bedrift-spesifikk">
+              <li>Timebestilling</li>
+              <li>Påmelding til kurs</li>
+              <li>Kontaktskjema eller påmelding til nyhetsbrev</li>
+            </ul>
+            <p></p>
+          </div>
+
+          <div>
+            <h3>Formålet med informasjonen som innhentes</h3>
+            <p>Vi er opptatt av å behandle personopplysninger på en måte som gjør at du kan føle deg trygg på at opplysninger om deg behandles konfidensielt.</p>
+            <p>Vi behandler personopplysninger som er nødvendige for at du kan nyttiggjøre deg av våre tjenester og benytte våre nettsider.</p>
+            <p>Vi vil behandle personopplysninger som vi mottar direkte fra deg eller på tekniske måter (for eksempel automatisk registrering via våre servere) for de formål som er beskrevet under
+              og for å kunne tilby, overvåke og analysere bruken av tjenester og nettsidene samt gjennomføre vedlikehold og forbedringer.
+            </p>
+            <p>Formålet med vår behandling av dine personopplysninger er å betjene din bruk av tjenester og nettsidene på en best mulig måte.</p>
+            <p>Når du oppgir personopplysninger for å få tilgang til våre tjenester og nettsidene, vil vi behandle dine personopplysninger for å:</p>
+            <ul class="list-inside list-disc bedrift-spesifikk">
+              <li>Gi tilgang til våre produkter og tjenester</li>
+              <li>Sende ut relevant informasjon</li>
+              <li>Håndtere kundeservice</li>
+              <li>Tilby deg gratis tips, guider m.m.</li>
+              <li>Gi deg informasjon om de mest relevante produkter og tjenester</li>
+            </ul>
+            <p></p>
+            <p>Vi vil ikke benytte personopplysningene til annet formål enn det angitte, med mindre det foreligger uttrykkelig samtykke fra deg om bruk til annet formål.</p>
+          </div>
+
+          <div>
+            <h3>Slik lagres informasjonen</h3>
+            <p class="bedrift-spesifikk">Informasjon knyttet til timebestilling lagres i systemet til vår timebestillingleverandør Timma OY (<a href="https://timma.no/">timma.no</a>). Informasjon innhentet gjennom skjema på våre nettsider (eks. kurspåmelding) lagres hos vår nettskjema-leverandør Jotform (<a href="https://jotform.com">jotform.com</a>).
+            </p>
+            <p>Informasjonen lagres inntil du selv ber om at de slettes, med mindre annet følger av lov.</p>
+            <p>Informasjon slettes på oppfordring ved å kontakte oss.</p>
+          </div>
+
+          <div>
+            <h3>Slik kan du slette dine personopplysninger</h3>
+            <p>Informasjon slettes på oppfordring ved å kontakte vår kundeservice på <span class="bedrift-spesifikk">tlf. 407 31 326 eller e-post <a href="mailto:post@pimentel.no">post@pimentel.no</a>.</span>
+            </p>
+          </div>
+
+          <div>
+            <h3>Utlevering av informasjon til tredjepart?</h3>
+            <p>Personopplysningene deles ikke med utenforstående tredjeparter, men mindre du ønsker å benytte betalingstilbud fra våre underleverandører som <span class="bedrift-spesifikk">Stripe eller PayPal</span>.
+              Disse underleverandørene kan behandle personopplysninger på vegne av oss.
+            </p>
+            <p>Hvis vi skulle utlevere personopplysninger til organisasjoner som utfører tjenester på vegne av oss, vil vi kreve at tjenesteleverandørene bare bruker slike personopplysninger med det
+              formål å yte slike tjenester til oss og vi vil innhente de garantier som anses påkrevd for beskyttelse av dine personopplysninger det formål.
+            </p>
+            <p>Alle tredjeparter som mottar personopplysninger fra oss er forpliktet til å følge våre standarder for behandling av personopplysninger eller tilsvarende standarder, samt forpliktelser
+              som følger av den til enhver tid gjeldende personvernlovgivning.
+            </p>
+            <p>Dersom det pålagt ved lov eller det er mistanke om at det er begått lovbrudd i forbindelse med bruk av våre tjenester, vil personopplysninger vi har lagret om deg kunne utleveres til
+              offentlige myndigheter.
+            </p>
+            <p>Dersom personopplysninger kan bli gjenstand for overføring til en annen organisasjon i forbindelse med fusjon, finansiering, omorganisering eller oppløsningstransaksjon av hele eller
+              deler av oss, vil vi kun gjøre dette dersom de involverte partene har inngått en avtale der innsamlingen, bruk og deling av personopplysningene er begrenset til de formålene som angår
+              transaksjonen, herunder en bestemmelse om hvorvidt transaksjonen skal gå videre eller ikke, og personopplysningene skal kun brukes av de involverte parter for å gjennomføre og fullføre
+              transaksjonen. Hvis et annet selskap kjøper oss eller vår virksomhet eller eiendeler, vil dette selskapet ha tilgang til personopplysningene innsamlet av oss, og vil påta seg de
+              rettigheter og forpliktelser vedrørende dine personopplysninger som beskrevet i denne personvernerklæringen.
+            </p>
+          </div>
+
+          <div>
+            <h3>Tredjepartslenker</h3>
+            <p>Av og til, etter vårt skjønn, kan vi inkludere eller tilby tredjeparts produkter eller tjenester på våre nettsider. Vi kan også ha lenker på våre nettsider til andre nettsteder som
+              ikke er under vår kontroll. Disse koblingene tilbys kun til orientering. Disse tredjeparts nettsider har separate og uavhengige retningslinjer for personvern. Vi oppfordrer deg til å
+              lese personvernreglene for hver nettside du besøker. Vi har ikke noe ansvar for innholdet og aktivitetene til disse nettsidene.
+            </p>
+          </div>
+
+          <div>
+            <h3>Sikkerhet</h3>
+            <p>Beskyttelse av dine personopplysninger er viktig for oss. Derfor gjør vi det vi kan for å opprettholde og benytte rimelige tiltak for fysisk og teknisk sikkerhet av kontorer og
+              informasjonslagringsanlegg, for å forhindre tap, misbruk, uautorisert tilgang, avsløring eller modifikasjon av dine personopplysninger.
+            </p>
+            <p>Dine personopplysninger behandles bak sikrede nettverk og er kun tilgjengelig for et begrenset antall personer som har spesielle rettigheter til slike systemer, og som er pålagt å
+              behandle personopplysningene konfidensielt. Vi benytter oss av datasystemer med begrenset tilgang, plassert i anlegg med fysiske sikkerhetsforanstaltninger.
+            </p>
+            <p>Vi evaluerer vår datainnsamling, lagrings- og behandlingspraksis, inkludert fysiske sikkerhetstiltak, for å beskytte uautorisert tilgang til våre datasystemer.</p>
+            <p>Alle betalingstransaksjoner behandles via en gateway-leverandør og lagres ikke eller behandles på våre servere. I tillegg er all debet- og kredittkortinformasjon du oppgir kryptert
+              via SSL-teknologi (Secure Socket Layer).
+            </p>
+            <p>Hvis en ansatt hos oss misbruker dine personopplysninger, vil dette bli ansett som et alvorlig brudd hvor vi vil kunne treffe disiplinære tiltak, inkludert oppsigelse. Hvis en person
+              eller en organisasjon misbruker personopplysninger de har mottatt for å bistå med levering av våre tjenester og nettsider, vil dette bli ansett som et alvorlig brudd hvor vi vil kunne
+              treffe passende tiltak, inkludert heving av avtaler mellom oss og den enkelte organisasjonen.
+            </p>
+            <p>Ved avvik vedrørende dine personopplysninger vil vi varsle deg via e-post innen 4 virkedager.</p>
+          </div>
+
+          <div>
+            <h3>Overføring av personopplysninger til utlandet</h3>
+            <p>Dine personopplysninger kan overføres innenfor det europeiske økonomiske samarbeidsområdet og andre land som Europa-kommisjonen har ansett for å ha tilstrekkelig beskyttelse av
+              personopplysninger på grunnlag av artikkel 45 i forordning (EU) 2016/679. Ditt samtykke til denne personvernerklæringen representerer ditt samtykke til denne overføringen.
+            </p>
+          </div>
+
+          <div>
+            <h3>Dine rettigheter</h3>
+            <p>Du som bruker av våre nettsider har, med de begrensninger som følger av den til enhver tid gjeldende personvernlovgivning, rett til innsyn i personopplysningene dine og du har rett
+              til å vite hvordan de behandles. Du kan også kreve retting, sletting og begrensninger i behandlingen av personopplysninger vi lagrer om deg.
+            </p>
+            <p>Du kan til enhver tid trekke tilbake ditt samtykke og alle data om deg vil bli slettet med unntak av det som er påkrevd i henhold til f.eks. regnskapsloven dersom du er betalende
+              kunde.
+            </p>
+          </div>
+
+          <div>
+            <h3>Kontaktinformasjon</h3>
+            <p>Dersom du vil kreve innsyn, retting eller sletting av personopplysninger eller dersom du har spørsmål eller forespørsler om denne personvernerklæringen, vår behandling eller ønsker å
+              klage på vår behandling, kan du kontakte oss på:
+            </p>
+            <p class="bedrift-spesifikk">
+              <strong>Telefon</strong>: 407 31 326<br/>
+              <strong>E-post</strong>: <a href="mailto:post@pimentel.no">post@pimentel.no</a><br/>
+              <strong>Postadresse:</strong> Eplehagen 43, 1424 Ski<br/>
+            </p>
+            <p>Du har også rett til å inngi klage til Datatilsynet om ethvert forhold vedrørende behandling av dine personopplysninger. Kontaktinformasjon dit er tilgjengelig på
+              <a href="https://www.datatilsynet.no/">www.datatilsynet.no</a>.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
